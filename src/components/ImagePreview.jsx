@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Row, Col, Form, Spinner } from 'react-bootstrap';
 
-function ImagePreview({ imgkey, image }) {
+function ImagePreview({ imgkey, image, filename }) {
     const [isAllowShare, setAllowShare] = useState(true);
     const [hasDownloaded, setHasDownloaded] = useState(false);
     const [url, setUrl] = useState('');
