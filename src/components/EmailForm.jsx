@@ -14,6 +14,7 @@ function EmailForm({ composedImages, filename, setErrorMessage }) {
               key={key}
               imgkey={key}
               image={image}
+              filename={filename}
             />
           )}
         </Row>
