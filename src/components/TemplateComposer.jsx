@@ -24,6 +24,9 @@ function TemplateComposer({ images, onComposeComplete }) {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        // Draw template FIRST
+        ctx.drawImage(templateImg, 0, 0);
+
         let loadedCount = 0;
 
         images.forEach((imgSrc, index) => {
@@ -53,12 +56,11 @@ function TemplateComposer({ images, onComposeComplete }) {
               sy = (img.height - sHeight) / 2;
             }
 
+            // Draw photos AFTER template
             ctx.drawImage(img, sx, sy, sWidth, sHeight, x, y, width, height);
 
             loadedCount++;
             if (loadedCount === templateData.positions.length) {
-              // Draw the template ON TOP of photos
-              ctx.drawImage(templateImg, 0, 0);
               const finalImage = canvas.toDataURL(GLOBAL.IMAGE_FORMAT);
               composedResults.push({ key: templateKey, image: finalImage });
               callback();

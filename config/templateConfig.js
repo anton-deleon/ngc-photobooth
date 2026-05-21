@@ -1,11 +1,72 @@
 export const TEMPLATES = {
-    PASKONG_PINOY: {
-        path: '/assets/templates/paskong-pinoy-2025.png',
-        noOfPhotos: 3,
+    ANO_TARA_1: {
+        path: '/assets/templates/1.png',
+        noOfPhotos: 4,
         positions: [
-            { x: 47.4, y: 117.7, width: 1136.4, height: 639.2 },
-            { x: 1210.6, y: 117.7, width: 662, height: 372.4 },
-            { x: 1210.6, y: 512.5, width: 662, height: 372.4 },
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_2: {
+        path: '/assets/templates/2.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_3: {
+        path: '/assets/templates/3.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_4: {
+        path: '/assets/templates/4.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_5: {
+        path: '/assets/templates/5.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_6: {
+        path: '/assets/templates/6.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
+        ],
+    },
+    ANO_TARA_7: {
+        path: '/assets/templates/7.png',
+        noOfPhotos: 4,
+        positions: [
+            { x: 28.2, y: 24.7, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 407.4, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 790.1, width: 544.2, height: 363.8 },
+            { x: 28.2, y: 1172.9, width: 544.2, height: 363.8 },
         ],
     }
 };
