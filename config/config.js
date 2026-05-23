@@ -1,8 +1,8 @@
 export const GLOBAL = {
     ASPECT_RATIO_X: 595.9,
     ASPECT_RATIO_Y: 417.1,
-    IMAGE_COUNTDOWN: 0,
-    CAPTURE_COUNTDOWN: 0,
+    IMAGE_COUNTDOWN: 5,
+    CAPTURE_COUNTDOWN: 2,
     IMAGE_FORMAT: 'image/png',
     MAX_PHOTOS: 3
 };

@@ -4,7 +4,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -13,7 +13,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -22,7 +22,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -31,7 +31,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -40,7 +40,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -49,7 +49,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -58,7 +58,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     },
@@ -67,7 +67,7 @@ export const TEMPLATES = {
         noOfPhotos: 3,
         positions: [
             { x: 135.7, y: 111.6, width: 595.9, height: 417.1, rotation: -6.1 },
-            { x: 323.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
+            { x: 333.7, y: 597.9, width: 613.1, height: 429.2, rotation: 2.2 },
             { x: 153.8, y: 1106.6, width: 593.5, height: 415.4, rotation: -3.8 }
         ],
     }

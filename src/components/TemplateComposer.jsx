@@ -6,6 +6,7 @@ import { TEMPLATES } from '../../config/templateConfig';
 function TemplateComposer({ images, onComposeComplete }) {
   const canvasRef = useRef(null);
   const [composedImages, setComposedImages] = useState([]);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (images.length !== GLOBAL.MAX_PHOTOS) return;
@@ -117,6 +118,7 @@ function TemplateComposer({ images, onComposeComplete }) {
         return;
       }
 
+      setProgress(`${current}/${templateKeys.length}`);
       const key = templateKeys[current];
       const data = TEMPLATES[key];
       current++;
@@ -132,7 +134,7 @@ function TemplateComposer({ images, onComposeComplete }) {
         <Col md={10}>
           {composedImages.length === 0 ? (
             <>
-              <h4 className="mb-3">Composing your photos...</h4>
+              <h4 className="mb-3">{"Composing your photos..." + `(${progress})`}</h4>
               <Spinner animation="border" role="status" variant="primary">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
