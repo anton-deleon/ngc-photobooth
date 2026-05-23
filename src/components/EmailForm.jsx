@@ -33,7 +33,7 @@ function EmailForm({ composedImages, filename, setErrorMessage }) {
             checked={allowPosting}
             onChange={(e) => setAllowPosting(e.target.checked)}
             label="I allow the social media team to post my downloaded photos."
-            style={{ fontSize: '0.9rem' }}
+            style={{ fontSize: '1.2rem' }}
           />
         </div>
       </Form>
