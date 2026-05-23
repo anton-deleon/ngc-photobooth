@@ -24,9 +24,6 @@ function TemplateComposer({ images, onComposeComplete }) {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Draw template FIRST
-        ctx.drawImage(templateImg, 0, 0);
-
         let loadedCount = 0;
 
         images.forEach((imgSrc, index) => {
@@ -35,7 +32,14 @@ function TemplateComposer({ images, onComposeComplete }) {
 
           img.onload = () => {
             const pos = templateData.positions[index];
-            const { x, y, width, height } = pos;
+
+            const {
+              x,
+              y,
+              width,
+              height,
+              rotation = 0 // degrees
+            } = pos;
 
             const imgAspect = img.width / img.height;
             const boxAspect = width / height;
@@ -56,13 +60,44 @@ function TemplateComposer({ images, onComposeComplete }) {
               sy = (img.height - sHeight) / 2;
             }
 
-            // Draw photos AFTER template
-            ctx.drawImage(img, sx, sy, sWidth, sHeight, x, y, width, height);
+            // Save canvas state
+            ctx.save();
+
+            // Move origin to center of target box
+            ctx.translate(x + width / 2, y + height / 2);
+
+            // Rotate canvas
+            ctx.rotate((rotation * Math.PI) / 180);
+
+            // Draw image centered on rotated origin
+            ctx.drawImage(
+              img,
+              sx,
+              sy,
+              sWidth,
+              sHeight,
+              -width / 2,
+              -height / 2,
+              width,
+              height
+            );
+
+            // Restore canvas state
+            ctx.restore();
 
             loadedCount++;
+
             if (loadedCount === templateData.positions.length) {
+              // Draw the template ON TOP of photos
+              ctx.drawImage(templateImg, 0, 0);
+
               const finalImage = canvas.toDataURL(GLOBAL.IMAGE_FORMAT);
-              composedResults.push({ key: templateKey, image: finalImage });
+
+              composedResults.push({
+                key: templateKey,
+                image: finalImage
+              });
+
               callback();
             }
           };
@@ -97,7 +132,7 @@ function TemplateComposer({ images, onComposeComplete }) {
         <Col md={10}>
           {composedImages.length === 0 ? (
             <>
-              <h4 className="mb-3">Composing your photo...</h4>
+              <h4 className="mb-3">Composing your photos...</h4>
               <Spinner animation="border" role="status" variant="primary">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
