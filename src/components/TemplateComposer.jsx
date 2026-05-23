@@ -134,7 +134,7 @@ function TemplateComposer({ images, onComposeComplete }) {
         <Col md={10}>
           {composedImages.length === 0 ? (
             <>
-              <h4 className="mb-3">{"Composing your photos..." + `(${progress})`}</h4>
+              <h4 className="mb-3">{`Composing your photos... (${progress})`}</h4>
               <Spinner animation="border" role="status" variant="primary">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>

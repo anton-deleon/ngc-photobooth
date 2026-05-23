@@ -42,7 +42,23 @@ function App() {
           />
         ) : (
           <>
-            <EmailForm composedImages={composedImages} filename={captureFilename} setErrorMessage={setErrorMessage} />
+            <div
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                overflowY: 'auto',
+                zIndex: 10
+              }}
+            >
+              <EmailForm
+                composedImages={composedImages}
+                filename={captureFilename}
+                setErrorMessage={setErrorMessage}
+              />
+            </div>
           </>
         )}
       </div>

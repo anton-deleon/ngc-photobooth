@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Row, Col, Form, Spinner } from 'react-bootstrap';
 
-function ImagePreview({ imgkey, image, filename }) {
-    const [isAllowShare, setAllowShare] = useState(true);
+function ImagePreview({ imgkey, image, filename, allowPosting }) {
     const [hasDownloaded, setHasDownloaded] = useState(false);
     const [url, setUrl] = useState('');
     const [status, setStatus] = useState('');
@@ -17,7 +16,7 @@ function ImagePreview({ imgkey, image, filename }) {
             const res = await fetch('/api/vercelPut', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ base64: image, filename: isAllowShare ? `post_${filename}` : filename }),
+                body: JSON.stringify({ base64: image, filename: allowPosting ? `post_${filename}` : filename }),
             });
 
             const data = await res.json();
@@ -44,7 +43,11 @@ function ImagePreview({ imgkey, image, filename }) {
     return (
         <Col
             imgkey={imgkey}
-            className="d-flex flex-column justify-content-start align-items-center mb-3 mx-auto d-block"
+            xs={12}
+            sm={6}
+            md={6}
+            lg={4}
+            className="d-flex flex-column justify-content-start align-items-center mb-3 mx-auto"
         >
             <img
                 src={image}
@@ -60,41 +63,6 @@ function ImagePreview({ imgkey, image, filename }) {
                 }}
                 onContextMenu={e => e.preventDefault()}
             />
-
-            {/* <div
-                style={{
-                    background: "rgba(156, 156, 156, 0.7)",  // transparent gray
-                    padding: "0.6rem 0.8rem",
-                    borderRadius: "5px",
-                    width: "100%",
-                    maxWidth: "20rem",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.6rem",
-                    marginBottom: "0.5rem"
-                }}
-            >
-                <Form.Check
-                    type="checkbox"
-                    id={`share-${imgkey}`}
-                    checked={isAllowShare}
-                    onChange={() => setAllowShare(!isAllowShare)}
-                    style={{ margin: 0 }}
-                />
-
-                <label
-                    htmlFor={`share-${imgkey}`}
-                    style={{
-                        fontSize: "0.9rem",
-                        color: "white",
-                        margin: 0,
-                        cursor: "pointer",
-                        textAlign: "left"
-                    }}
-                >
-                    Allow this photo to be shared with NGC’s social media team?
-                </label>
-            </div> */}
 
             {status &&
                 <div style={{
