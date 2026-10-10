@@ -1,6 +1,6 @@
 export const GLOBAL = {
-    ASPECT_RATIO_X: 595.9,
-    ASPECT_RATIO_Y: 417.1,
+    ASPECT_RATIO_X: 628,
+    ASPECT_RATIO_Y: 503.5,
     IMAGE_COUNTDOWN: 5,
     CAPTURE_COUNTDOWN: 2,
     IMAGE_FORMAT: 'image/png',
